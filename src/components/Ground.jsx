@@ -5,7 +5,7 @@ import { groundTexture } from "../assets/textures";
 
 export default function Ground() {
   const [ref] = usePlane(() => ({
-    rotation: [-Math.PI / 4, 0, 0],
+    rotation: [-Math.PI / 2, 0, 0],
     position: [0, 0, 0],
   }));
 
@@ -16,7 +16,7 @@ export default function Ground() {
 
   return (
     <mesh ref={ref}>
-      <planeBufferGeometry attach='geometry' args={[100, 100]} />
+      <planeGeometry attach='geometry' args={[100, 100]} />
       <meshStandardMaterial attach='material' map={groundTexture} />
     </mesh>
   );
