@@ -64,3 +64,11 @@ body {
 .cursor {
   color: #242424;
 }
+
+.texture-selector {
+  transform: scale(5);
+}
+
+.texture-selector img.active {
+  border: 0.65px solid #f24236;
+}
