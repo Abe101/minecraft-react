@@ -1,7 +1,17 @@
-import dirtImg from "./dirt.jpeg";
+import dirtImg from "./dirt.png";
 import grassImg from "./grass.jpeg";
 import glassImg from "./glass.png";
-import logImg from "./log.jpeg";
-import woodImg from "./wood.png";
+import logImg from "./log.png";
+import woodImg from "./plank.png";
+import strippedLogImg from "./stripped_log.png";
+import cobblestoneImg from "./cobblestone.png";
 
-export { dirtImg, grassImg, glassImg, logImg, woodImg };
+export {
+  dirtImg,
+  grassImg,
+  glassImg,
+  logImg,
+  woodImg,
+  strippedLogImg,
+  cobblestoneImg,
+};

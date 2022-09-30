@@ -18,7 +18,7 @@ export default function Menu() {
                 <li>Space: Jump</li>
                 <li>Click: Place a block</li>
                 <li>Alt + Click: Remove a block</li>
-                <li>Digits 1-5: Select cube</li>
+                <li>Digits 1-7: Select cube</li>
             </ul>
         </div>
       <button onClick={saveWorld}>Save World</button>
