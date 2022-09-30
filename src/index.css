@@ -72,3 +72,8 @@ body {
 .texture-selector img.active {
   border: 0.65px solid #f24236;
 }
+
+.menu {
+  top: 10px;
+  left: 10px;
+}
