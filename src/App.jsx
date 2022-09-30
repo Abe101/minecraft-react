@@ -4,6 +4,7 @@ import { Canvas } from "@react-three/fiber";
 
 import Ground from "./components/Ground";
 import Player from "./components/Player";
+import FPV from "./components/FirstPersonView";
 
 function App() {
   return (
@@ -11,11 +12,13 @@ function App() {
       <Canvas>
         <Sky sunPosition={[100, 100, 20]} />
         <ambientLight intesity={0.5} />
+        <FPV />
         <Physics>
           <Player />
           <Ground />
         </Physics>
       </Canvas>
+      <div className='absolute centered cursor'>+</div>
     </>
   );
 }
