@@ -51,7 +51,7 @@ export default function Cube({ position, texture }) {
             addCube(x, y, z + 1);
             return;
           case 5:
-            addCube(x - 1, y, z - 1);
+            addCube(x, y, z - 1);
             return;
           default:
             return;
