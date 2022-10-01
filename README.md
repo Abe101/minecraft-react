@@ -11,3 +11,4 @@ I more or less followed the tutorial made by Daniel Bark on youtube. I am not go
 5. Reduce player size (Before the player wasn't able to squeeze in one block surrounded by other blocks, now they can).
 6. Fix player repeatedly jumping when spacebar is held.
 7. Fix block placing diagonal when it should be adjacent.
+8. Increase ground area from 100x100 to 200x200.
