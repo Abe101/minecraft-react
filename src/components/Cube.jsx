@@ -63,7 +63,6 @@ export default function Cube({ position, texture }) {
         color={isHovered ? "grey" : "white"}
         map={activeTexture}
         transparent={true}
-        opacity={texture === "glass" ? 0.7 : 1}
         attach='material'
       />
     </mesh>

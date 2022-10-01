@@ -13,7 +13,7 @@ export default function Player() {
   const [ref, api] = useSphere(() => ({
     mass: 1,
     type: "Dynamic",
-    position: [0, 1, 0],
+    position: [0, 0.5, 0],
   }));
   const position = useRef([0, 0, 0]);
   const velocity = useRef([0, 0, 0]);
