@@ -8,6 +8,7 @@ import {
   woodImg,
   strippedLogImg,
   cobblestoneImg,
+  bedrockImg,
 } from "./assets";
 
 const dirtTexture = new TextureLoader().load(dirtImg);
@@ -15,7 +16,7 @@ const grassTexture = new TextureLoader().load(grassImg);
 const glassTexture = new TextureLoader().load(glassImg);
 const logTexture = new TextureLoader().load(logImg);
 const woodTexture = new TextureLoader().load(woodImg);
-const groundTexture = new TextureLoader().load(grassImg);
+const groundTexture = new TextureLoader().load(bedrockImg);
 const strippedLogTexture = new TextureLoader().load(strippedLogImg);
 const cobblestoneTexture = new TextureLoader().load(cobblestoneImg);
 

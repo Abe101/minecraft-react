@@ -5,6 +5,7 @@ import logImg from "./log.png";
 import woodImg from "./plank.png";
 import strippedLogImg from "./stripped_log.png";
 import cobblestoneImg from "./cobblestone.png";
+import bedrockImg from "./bedrock.png";
 
 export {
   dirtImg,
@@ -14,4 +15,5 @@ export {
   woodImg,
   strippedLogImg,
   cobblestoneImg,
+  bedrockImg,
 };

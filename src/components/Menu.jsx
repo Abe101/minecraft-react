@@ -15,7 +15,7 @@ export default function Menu() {
       </button>
       <div className={`${isHidden ? "hidden" : ""}`}>
         <div>
-          <p>Version: 0.1.22 Alpha</p>
+          <p>Version: 0.1.24 Alpha</p>
         </div>
         <div>
           <p>Controls:</p>

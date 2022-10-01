@@ -11,9 +11,10 @@ export default function Player() {
   const actions = useKeyboard();
   const { camera } = useThree();
   const [ref, api] = useSphere(() => ({
-    mass: 1,
+    mass: 0.75,
     type: "Dynamic",
-    position: [0, 0.5, 0],
+    position: [0, 1, 0],
+    args: [0.5],
   }));
   const position = useRef([0, 0, 0]);
   const velocity = useRef([0, 0, 0]);
@@ -55,5 +56,5 @@ export default function Player() {
     }
   });
 
-  return <mesh ref={ref}></mesh>;
+  return <mesh ref={ref} />;
 }
