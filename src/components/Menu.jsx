@@ -20,10 +20,7 @@ export default function Menu() {
         <div>
           <p>Controls:</p>
           <ul>
-            <li>W: Move Forward</li>
-            <li>A: Move Left</li>
-            <li>S: Move Backward</li>
-            <li>D: Move Right</li>
+            <li>WASD: Movement</li>
             <li>Space: Jump</li>
             <li>Click: Place a block</li>
             <li>Alt + Click: Remove a block</li>
