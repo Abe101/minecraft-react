@@ -17,7 +17,7 @@ function App() {
   return (
     <>
       <ToastContainer
-        position='top-center'
+        position="top-center"
         autoClose={5000}
         hideProgressBar={false}
         newestOnTop={false}
@@ -37,7 +37,7 @@ function App() {
           <Ground />
         </Physics>
       </Canvas>
-      <div className='absolute top-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%]'>
+      <div className="absolute top-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%]">
         <TbCrosshair />
       </div>
       <TextureSelector />

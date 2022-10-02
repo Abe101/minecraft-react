@@ -56,7 +56,7 @@ export const cubesSlice = createSlice({
   },
 });
 
-export const { addCube, removeCube, setTexture, saveCubes, resetCubes } =
-  cubesSlice.actions;
+// eslint-disable-next-line prettier/prettier
+export const { addCube, removeCube, setTexture, saveCubes, resetCubes } = cubesSlice.actions;
 
 export default cubesSlice.reducer;

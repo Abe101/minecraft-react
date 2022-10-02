@@ -8,7 +8,7 @@ export default function Menu() {
   const [isHidden, setIsHidden] = useState(false);
 
   return (
-    <div className='absolute top-3 left-3'>
+    <div className="absolute top-3 left-3">
       <button onClick={() => setIsHidden(!isHidden)}>
         {isHidden ? "Show Controls" : "Hide Controls"}
       </button>

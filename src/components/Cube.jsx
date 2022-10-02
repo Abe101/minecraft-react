@@ -57,12 +57,12 @@ export default function Cube({ position, texture }) {
         }
       }}
     >
-      <boxGeometry attach='geometry' />
+      <boxGeometry attach="geometry" />
       <meshStandardMaterial
         color={isHovered ? "grey" : "white"}
         map={activeTexture}
         transparent={true}
-        attach='material'
+        attach="material"
       />
     </mesh>
   );

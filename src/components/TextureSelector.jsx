@@ -40,7 +40,7 @@ export default function TextureSelector() {
       cobblestone,
       strippedLog,
     };
-    const pressedTexture = Object.entries(textures).find(([_, v]) => v);
+    const pressedTexture = Object.entries(textures).find(([, v]) => v);
     if (pressedTexture) {
       dispatch(setTexture(pressedTexture[0]));
     }
@@ -59,7 +59,7 @@ export default function TextureSelector() {
 
   return (
     visible && (
-      <div className='absolute top-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] scale-[5]'>
+      <div className="absolute top-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] scale-[5]">
         {Object.entries(images).map(([k, src]) => (
           <img
             key={k}

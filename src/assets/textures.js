@@ -1,4 +1,4 @@
-import { NearestFilter, RepeatWrapping, TextureLoader } from "three";
+import { NearestFilter, RepeatWrapping, TextureLoader } from 'three';
 
 import {
   dirtImg,
@@ -9,7 +9,7 @@ import {
   strippedLogImg,
   cobblestoneImg,
   bedrockImg,
-} from "./assets";
+} from './assets';
 
 const dirtTexture = new TextureLoader().load(dirtImg);
 const grassTexture = new TextureLoader().load(grassImg);

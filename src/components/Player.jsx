@@ -1,8 +1,8 @@
-import { useSphere } from "@react-three/cannon";
-import { useFrame, useThree } from "@react-three/fiber";
-import { useEffect, useRef } from "react";
-import { Vector3 } from "three";
-import { useKeyboard } from "../hooks/useKeyboard";
+import { useSphere } from '@react-three/cannon';
+import { useFrame, useThree } from '@react-three/fiber';
+import { useEffect, useRef } from 'react';
+import { Vector3 } from 'three';
+import { useKeyboard } from '../hooks/useKeyboard';
 
 const JUMP_FORCE = 4;
 const SPEED = 4;
@@ -12,7 +12,7 @@ export default function Player() {
   const { camera } = useThree();
   const [ref, api] = useSphere(() => ({
     mass: 0.75,
-    type: "Dynamic",
+    type: 'Dynamic',
     position: [0, 1, 0],
     args: [0.5],
   }));
@@ -37,11 +37,7 @@ export default function Player() {
       0,
       (actions.moveBackward ? 1 : 0) - (actions.moveForward ? 1 : 0)
     );
-    const sideVector = new Vector3(
-      (actions.moveLeft ? 1 : 0) - (actions.moveRight ? 1 : 0),
-      0,
-      0
-    );
+    const sideVector = new Vector3((actions.moveLeft ? 1 : 0) - (actions.moveRight ? 1 : 0), 0, 0);
 
     direction
       .subVectors(frontVector, sideVector)

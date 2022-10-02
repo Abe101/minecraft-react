@@ -20,8 +20,8 @@ export default function Ground() {
         dispatch(addCube({ X: x, Y: y, Z: z }));
       }}
     >
-      <planeGeometry attach='geometry' args={[100, 100]} />
-      <meshStandardMaterial attach='material' map={groundTexture} />
+      <planeGeometry attach="geometry" args={[100, 100]} />
+      <meshStandardMaterial attach="material" map={groundTexture} />
     </mesh>
   );
 }
