@@ -1,18 +1,17 @@
 import { useBox } from "@react-three/cannon";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+
 import * as textures from "../assets/textures";
-import { useStore } from "../hooks/useStore";
+import { addCube, removeCube } from "../store/slices/cubeSlice";
 
 export default function Cube({ position, texture }) {
+  const dispatch = useDispatch();
   const [isHovered, setIsHovered] = useState(false);
   const [ref] = useBox(() => ({
     type: "Static",
     position,
   }));
-  const [addCube, removeCube] = useStore((state) => [
-    state.addCube,
-    state.removeCube,
-  ]);
   const activeTexture = textures[texture + "Texture"];
 
   return (
@@ -31,27 +30,27 @@ export default function Cube({ position, texture }) {
         const clickedFace = Math.floor(e.faceIndex / 2);
         const { x, y, z } = ref.current.position;
         if (e.altKey) {
-          removeCube(x, y, z);
+          dispatch(removeCube({ X: x, Y: y, Z: z }));
           return;
         }
         switch (clickedFace) {
           case 0:
-            addCube(x + 1, y, z);
+            dispatch(addCube({ X: x + 1, Y: y, Z: z }));
             return;
           case 1:
-            addCube(x - 1, y, z);
+            dispatch(addCube({ X: x - 1, Y: y, Z: z }));
             return;
           case 2:
-            addCube(x, y + 1, z);
+            dispatch(addCube({ X: x, Y: y + 1, Z: z }));
             return;
           case 3:
-            addCube(x, y - 1, z);
+            dispatch(addCube({ X: x, Y: y - 1, Z: z }));
             return;
           case 4:
-            addCube(x, y, z + 1);
+            dispatch(addCube({ X: x, Y: y, Z: z + 1 }));
             return;
           case 5:
-            addCube(x, y, z - 1);
+            dispatch(addCube({ X: x, Y: y, Z: z - 1 }));
             return;
           default:
             return;

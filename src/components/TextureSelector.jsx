@@ -1,7 +1,17 @@
 import { useEffect, useState } from "react";
 import { useKeyboard } from "../hooks/useKeyboard";
-import { useStore } from "../hooks/useStore";
-import { dirtImg, grassImg, glassImg, woodImg, logImg, cobblestoneImg, strippedLogImg } from "../assets/assets";
+import {
+  dirtImg,
+  grassImg,
+  glassImg,
+  woodImg,
+  logImg,
+  cobblestoneImg,
+  strippedLogImg,
+} from "../assets/assets";
+import { useSelector, useDispatch } from "react-redux";
+
+import { setTexture } from "../store/slices/cubeSlice";
 
 const images = {
   dirt: dirtImg,
@@ -14,12 +24,11 @@ const images = {
 };
 
 export default function TextureSelector() {
+  const dispatch = useDispatch();
   const [visible, setVisible] = useState(false);
-  const [activeTexture, setTexture] = useStore((state) => [
-    state.texture,
-    state.setTexture,
-  ]);
-  const { dirt, grass, glass, log, wood, cobblestone, strippedLog } = useKeyboard();
+  const activeTexture = useSelector((state) => state.cubes.texture);
+  const { dirt, grass, glass, log, wood, cobblestone, strippedLog } =
+    useKeyboard();
 
   useEffect(() => {
     const textures = {
@@ -29,11 +38,11 @@ export default function TextureSelector() {
       log,
       wood,
       cobblestone,
-      strippedLog
+      strippedLog,
     };
-    const pressedTexture = Object.entries(textures).find(([k, v]) => v);
+    const pressedTexture = Object.entries(textures).find(([_, v]) => v);
     if (pressedTexture) {
-      setTexture(pressedTexture[0]);
+      dispatch(setTexture(pressedTexture[0]));
     }
   }, [dirt, grass, glass, log, wood, cobblestone, strippedLog, setTexture]);
 
@@ -50,13 +59,15 @@ export default function TextureSelector() {
 
   return (
     visible && (
-      <div className='absolute centered texture-selector'>
+      <div className='absolute top-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] scale-[5]'>
         {Object.entries(images).map(([k, src]) => (
           <img
             key={k}
             src={src}
             alt={k}
-            className={`${k === activeTexture ? "active" : ""}`}
+            className={`${
+              k === activeTexture ? "border border-solid border-red-600" : ""
+            }`}
           />
         ))}
       </div>

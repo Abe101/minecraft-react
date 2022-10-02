@@ -1,14 +1,15 @@
 import { usePlane } from "@react-three/cannon";
+import { useDispatch } from "react-redux";
 
 import { groundTexture } from "../assets/textures";
-import { useStore } from "../hooks/useStore";
+import { addCube } from "../store/slices/cubeSlice";
 
 export default function Ground() {
+  const dispatch = useDispatch();
   const [ref] = usePlane(() => ({
     rotation: [-Math.PI / 2, 0, 0],
     position: [0, -0.5, 0],
   }));
-  const [addCube] = useStore((state) => [state.addCube]);
 
   return (
     <mesh
@@ -16,7 +17,7 @@ export default function Ground() {
       onClick={(e) => {
         e.stopPropagation();
         const [x, y, z] = Object.values(e.point).map((val) => Math.ceil(val));
-        addCube(x, y, z);
+        dispatch(addCube({ X: x, Y: y, Z: z }));
       }}
     >
       <planeGeometry attach='geometry' args={[100, 100]} />

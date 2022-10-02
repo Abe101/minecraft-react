@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   box-sizing: border-box;
 }
@@ -37,47 +41,4 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-}
-
-.flex {
-  display: flex;
-}
-
-.fixed {
-  position: fixed;
-}
-
-.relative {
-  position: relative;
-}
-
-.absolute {
-  position: absolute;
-}
-
-.centered {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.cursor {
-  color: #242424;
-}
-
-.texture-selector {
-  transform: scale(5);
-}
-
-.texture-selector img.active {
-  border: 0.65px solid #f24236;
-}
-
-.menu {
-  top: 10px;
-  left: 10px;
-}
-
-.menu .hidden {
-  visibility: hidden;
 }

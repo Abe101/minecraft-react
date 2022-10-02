@@ -1,7 +1,8 @@
+import { ToastContainer } from "react-toastify";
 import { Physics } from "@react-three/cannon";
 import { Sky } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import { Helmet } from "react-helmet";
+import { TbCrosshair } from "react-icons/tb";
 
 import Ground from "./components/Ground";
 import Player from "./components/Player";
@@ -10,14 +11,22 @@ import Cubes from "./components/Cubes";
 import TextureSelector from "./components/TextureSelector";
 import Menu from "./components/Menu";
 
+import "react-toastify/dist/ReactToastify.min.css";
+
 function App() {
   return (
     <>
-      <Helmet>
-        <meta charSet='utf-8' />
-        <title>Minecraft + React + Three</title>
-        <link rel="icon" href="/icons8-minecraft-grass-cube-gradient-120.png" />
-      </Helmet>
+      <ToastContainer
+        position='top-center'
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       <Canvas>
         <Sky sunPosition={[100, 100, 20]} />
         <ambientLight intesity={0.5} />
@@ -28,7 +37,9 @@ function App() {
           <Ground />
         </Physics>
       </Canvas>
-      <div className='absolute centered cursor'>+</div>
+      <div className='absolute top-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%]'>
+        <TbCrosshair />
+      </div>
       <TextureSelector />
       <Menu />
     </>

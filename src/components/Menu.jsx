@@ -1,15 +1,14 @@
 import { useState } from "react";
-import { useStore } from "../hooks/useStore";
+import { useDispatch } from "react-redux";
+
+import { saveCubes, resetCubes } from "../store/slices/cubeSlice";
 
 export default function Menu() {
+  const dispatch = useDispatch();
   const [isHidden, setIsHidden] = useState(false);
-  const [saveWorld, resetWorld] = useStore((state) => [
-    state.saveWorld,
-    state.resetWorld,
-  ]);
 
   return (
-    <div className='menu absolute'>
+    <div className='absolute top-3 left-3'>
       <button onClick={() => setIsHidden(!isHidden)}>
         {isHidden ? "Show Controls" : "Hide Controls"}
       </button>
@@ -26,9 +25,9 @@ export default function Menu() {
             <li>Alt + Click: Remove a block</li>
             <li>Digits 1-7: Select block</li>
           </ul>
-          <button onClick={saveWorld}>Save World</button>
+          <button onClick={() => dispatch(saveCubes())}>Save</button>
           <br />
-          <button onClick={resetWorld}>Reset World</button>
+          <button onClick={() => dispatch(resetCubes())}>Reset</button>
         </div>
       </div>
     </div>
