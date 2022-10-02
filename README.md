@@ -2,6 +2,8 @@
 
 I more or less followed the tutorial made by Daniel Bark on youtube. I am not going to take credit for the starting but I am going to add stuff on my own.
 
+! I am open to any suggestions or bug fixes or additional fixes you might like to add to it. Open in issues.
+
 # Change Log:
 
 - Version 0.1.24 Alpha
