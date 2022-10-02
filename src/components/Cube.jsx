@@ -35,29 +35,29 @@ export default function Cube({ position, texture }) {
         }
         switch (clickedFace) {
           case 0:
-            dispatch(addCube({ X: x + 1, Y: y, Z: z }));
+            dispatch(addCube({ X: x + 0.5, Y: y, Z: z }));
             return;
           case 1:
-            dispatch(addCube({ X: x - 1, Y: y, Z: z }));
+            dispatch(addCube({ X: x - 0.5, Y: y, Z: z }));
             return;
           case 2:
-            dispatch(addCube({ X: x, Y: y + 1, Z: z }));
+            dispatch(addCube({ X: x, Y: y + 0.5, Z: z }));
             return;
           case 3:
-            dispatch(addCube({ X: x, Y: y - 1, Z: z }));
+            dispatch(addCube({ X: x, Y: y - 0.5, Z: z }));
             return;
           case 4:
-            dispatch(addCube({ X: x, Y: y, Z: z + 1 }));
+            dispatch(addCube({ X: x, Y: y, Z: z + 0.5 }));
             return;
           case 5:
-            dispatch(addCube({ X: x, Y: y, Z: z - 1 }));
+            dispatch(addCube({ X: x, Y: y, Z: z - 0.5 }));
             return;
           default:
             return;
         }
       }}
     >
-      <boxGeometry attach="geometry" />
+      <boxGeometry attach="geometry" args={[0.5, 0.5, 0.5]} />
       <meshStandardMaterial
         color={isHovered ? "grey" : "white"}
         map={activeTexture}

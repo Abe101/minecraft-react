@@ -51,6 +51,7 @@ export const cubesSlice = createSlice({
       });
     },
     resetCubes: (state) => {
+      set("@cubes", []);
       state.cubes = [];
     },
   },

@@ -8,7 +8,7 @@ export default function Ground() {
   const dispatch = useDispatch();
   const [ref] = usePlane(() => ({
     rotation: [-Math.PI / 2, 0, 0],
-    position: [0, -0.5, 0],
+    position: [0, -0.25, 0],
   }));
 
   return (
@@ -17,10 +17,10 @@ export default function Ground() {
       onClick={(e) => {
         e.stopPropagation();
         const [x, y, z] = Object.values(e.point).map((val) => Math.ceil(val));
-        dispatch(addCube({ X: x, Y: y, Z: z }));
+        dispatch(addCube({ X: x - 0.5, Y: y, Z: z - 0.5 }));
       }}
     >
-      <planeGeometry attach="geometry" args={[100, 100]} />
+      <planeGeometry attach="geometry" args={[200, 200]} />
       <meshStandardMaterial attach="material" map={groundTexture} />
     </mesh>
   );
