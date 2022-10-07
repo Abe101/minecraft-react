@@ -1,26 +1,26 @@
 import { useEffect, useState } from "react";
 import { useKeyboard } from "../hooks/useKeyboard";
 import {
-  dirtImg,
-  grassImg,
-  glassImg,
-  woodImg,
-  logImg,
-  cobblestoneImg,
-  strippedLogImg,
+  dirtBlock,
+  grassBlock,
+  glassBlock,
+  logBlock,
+  strippedLogBlock,
+  woodBlock,
+  cobblestoneBlock,
 } from "../assets/assets";
 import { useSelector, useDispatch } from "react-redux";
 
 import { setTexture } from "../store/slices/cubeSlice";
 
 const images = {
-  dirt: dirtImg,
-  grass: grassImg,
-  glass: glassImg,
-  wood: woodImg,
-  log: logImg,
-  strippedLog: strippedLogImg,
-  cobblestone: cobblestoneImg,
+  dirt: dirtBlock,
+  grass: grassBlock,
+  glass: glassBlock,
+  wood: woodBlock,
+  log: logBlock,
+  strippedLog: strippedLogBlock,
+  cobblestone: cobblestoneBlock,
 };
 
 export default function TextureSelector() {
@@ -48,7 +48,7 @@ export default function TextureSelector() {
   useEffect(() => {
     const visibilityTimeout = setTimeout(() => {
       setVisible(false);
-    }, 500);
+    }, 750);
     setVisible(true);
 
     return () => {
@@ -58,15 +58,19 @@ export default function TextureSelector() {
 
   return (
     visible && (
-      <div className="absolute top-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] scale-[5]">
-        {Object.entries(images).map(([k, src]) => (
-          <img
-            key={k}
-            src={src}
-            alt={k}
-            className={`${k === activeTexture ? "border border-solid border-red-600" : ""}`}
-          />
-        ))}
+      <div className="absolute top-[50%] right-[50%] translate-x-[25%] translate-y-[450%] scale-[5]">
+        <div className="grid grid-cols-7 bg-slate-500 border border-zinc-800 rounded-sm">
+          {Object.entries(images).map(([k, src]) => (
+            <img
+              key={k}
+              src={src}
+              alt={k}
+              className={`bg-slate-300 w-3 h-3 border-[0.2px] border-slate-500 ${
+                k === activeTexture ? "scale-125" : ""
+              }`}
+            />
+          ))}
+        </div>
       </div>
     )
   );
