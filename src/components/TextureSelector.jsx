@@ -27,8 +27,7 @@ export default function TextureSelector() {
   const dispatch = useDispatch();
   const [visible, setVisible] = useState(false);
   const activeTexture = useSelector((state) => state.cubes.texture);
-  const { dirt, grass, glass, log, wood, cobblestone, strippedLog } =
-    useKeyboard();
+  const { dirt, grass, glass, log, wood, cobblestone, strippedLog } = useKeyboard();
 
   useEffect(() => {
     const textures = {
@@ -65,9 +64,7 @@ export default function TextureSelector() {
             key={k}
             src={src}
             alt={k}
-            className={`${
-              k === activeTexture ? "border border-solid border-red-600" : ""
-            }`}
+            className={`${k === activeTexture ? "border border-solid border-red-600" : ""}`}
           />
         ))}
       </div>

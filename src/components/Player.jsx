@@ -37,11 +37,7 @@ export default function Player() {
       0,
       (actions.moveBackward ? 1 : 0) - (actions.moveForward ? 1 : 0)
     );
-    const sideVector = new Vector3(
-      (actions.moveLeft ? 1 : 0) - (actions.moveRight ? 1 : 0),
-      0,
-      0
-    );
+    const sideVector = new Vector3((actions.moveLeft ? 1 : 0) - (actions.moveRight ? 1 : 0), 0, 0);
 
     direction
       .subVectors(frontVector, sideVector)

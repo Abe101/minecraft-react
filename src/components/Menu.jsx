@@ -11,8 +11,7 @@ export default function Menu() {
     <div className="absolute top-3 left-3 bg-slate-400 rounded-lg p-1 m-1">
       <button
         className="bg-zinc-900 rounded-lg p-1 opacity-70 hover:opacity-100 hover:transition-opacity m-1"
-        onClick={() => setIsHidden(!isHidden)}
-      >
+        onClick={() => setIsHidden(!isHidden)}>
         {isHidden ? "Show Controls" : "Hide Controls"}
       </button>
       <div className={`${isHidden ? "hidden transition-all" : ""}`}>
@@ -35,15 +34,13 @@ export default function Menu() {
           <div className="flex flex-row gap-1">
             <button
               className="bg-zinc-900 rounded-lg p-1 opacity-70 hover:opacity-100 hover:transition-opacity m-1"
-              onClick={() => dispatch(saveCubes())}
-            >
+              onClick={() => dispatch(saveCubes())}>
               Save
             </button>
             <br />
             <button
               className="bg-zinc-900 rounded-lg p-1 opacity-70 hover:opacity-100 hover:transition-opacity m-1"
-              onClick={() => dispatch(resetCubes())}
-            >
+              onClick={() => dispatch(resetCubes())}>
               Reset
             </button>
           </div>

@@ -7,13 +7,4 @@ import strippedLogImg from "./stripped_log.png";
 import cobblestoneImg from "./cobblestone.png";
 import bedrockImg from "./bedrock.png";
 
-export {
-  dirtImg,
-  grassImg,
-  glassImg,
-  logImg,
-  woodImg,
-  strippedLogImg,
-  cobblestoneImg,
-  bedrockImg,
-};
+export { dirtImg, grassImg, glassImg, logImg, woodImg, strippedLogImg, cobblestoneImg, bedrockImg };

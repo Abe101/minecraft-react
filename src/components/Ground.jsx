@@ -18,8 +18,7 @@ export default function Ground() {
         e.stopPropagation();
         const [x, y, z] = Object.values(e.point).map((val) => Math.ceil(val));
         dispatch(addCube({ X: x - 0.5, Y: y, Z: z - 0.5 }));
-      }}
-    >
+      }}>
       <planeGeometry attach="geometry" args={[200, 200]} />
       <meshStandardMaterial attach="material" map={groundTexture} />
     </mesh>

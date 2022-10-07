@@ -55,8 +55,7 @@ export default function Cube({ position, texture }) {
           default:
             return;
         }
-      }}
-    >
+      }}>
       <boxGeometry attach="geometry" args={[0.5, 0.5, 0.5]} />
       <meshStandardMaterial
         color={isHovered ? "grey" : "white"}
