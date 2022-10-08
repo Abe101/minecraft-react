@@ -65,7 +65,7 @@ export default function TextureSelector() {
               key={k}
               src={src}
               alt={k}
-              className={`bg-slate-300 w-3 h-3 border-[0.2px] border-slate-500 ${
+              className={`bg-slate-300 w-3 h-3 border-t-[0.2px] border-b-[0.2px] border-r-[0.05px] border-l-[0.05px] border-slate-500 rounded-sm ${
                 k === activeTexture ? "scale-125" : ""
               }`}
             />
