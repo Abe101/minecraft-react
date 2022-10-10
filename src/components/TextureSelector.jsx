@@ -73,8 +73,6 @@ export default function TextureSelector() {
     }
   }, [dirt, grass, glass, log, wood, cobblestone, strippedLog, setTexture]);
 
-  console.log("activeTextureName", activeTextureName);
-
   useEffect(() => {
     const visibilityTimeout = setTimeout(() => {
       setVisible(false);
