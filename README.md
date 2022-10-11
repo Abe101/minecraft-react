@@ -2,7 +2,7 @@
 
 I more or less followed the tutorial made by Daniel Bark on youtube. I am not going to take credit for the starting but I am going to add stuff on my own.
 
-!! I am open to any suggestions or bug fixes or additional fixes you might like to add to it. Open in issues.
+### I am open to any suggestions or bug fixes or additional fixes you might like to add to it. Open in issues.
 
 [![Screenshot-2022-10-01-at-8-05-13-PM.png](https://i.postimg.cc/YSW33tLg/Screenshot-2022-10-01-at-8-05-13-PM.png)](https://postimg.cc/nsnBVbkc)
 
