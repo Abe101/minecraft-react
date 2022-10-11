@@ -4,11 +4,7 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:prettier/recommended",
-  ],
+  extends: ["eslint:recommended", "plugin:react/recommended", "plugin:prettier/recommended"],
   overrides: [],
   parserOptions: {
     ecmaVersion: "latest",
@@ -19,5 +15,6 @@ module.exports = {
     "react/react-in-jsx-scope": "off",
     "react/no-unknown-property": "off",
     "react/prop-types": "off",
+    "no-unused-vars": "warn",
   },
 };

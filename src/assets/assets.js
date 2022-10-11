@@ -8,7 +8,7 @@ import strippedLogImg from "./faces/stripped_log.png";
 import cobblestoneImg from "./faces/cobblestone.png";
 import bedrockImg from "./faces/bedrock.png";
 import blackWoolImg from "./faces/black_wool.png";
-import whiteWooldImg from "./faces/white_wool.png";
+import whiteWoolImg from "./faces/white_wool.png";
 import blueWoolImg from "./faces/blue_wool.png";
 import brownWoolImg from "./faces/brown_wool.png";
 import cyanWoolImg from "./faces/cyan_wool.png";
@@ -33,7 +33,7 @@ import woodBlock from "./blocks/planks.png";
 import strippedLogBlock from "./blocks/stripped_wood.png";
 import cobblestoneBlock from "./blocks/cobblestone.png";
 import blackWoolBlock from "./blocks/black_wool.png";
-import whiteWooldBlock from "./blocks/white_wool.png";
+import whiteWoolBlock from "./blocks/white_wool.png";
 import blueWoolBlock from "./blocks/blue_wool.png";
 import brownWoolBlock from "./blocks/brown_wool.png";
 import cyanWoolBlock from "./blocks/cyan_wool.png";
@@ -49,7 +49,32 @@ import purpleWoolBlock from "./blocks/purple_wool.png";
 import redWoolBlock from "./blocks/red_wool.png";
 import yellowWoolBlock from "./blocks/yellow_wool.png";
 
-export { dirtImg, grassImg, glassImg, logImg, woodImg, strippedLogImg, cobblestoneImg, bedrockImg };
+export {
+  dirtImg,
+  grassImg,
+  glassImg,
+  logImg,
+  woodImg,
+  strippedLogImg,
+  cobblestoneImg,
+  bedrockImg,
+  blackWoolImg,
+  whiteWoolImg,
+  blueWoolImg,
+  brownWoolImg,
+  cyanWoolImg,
+  grayWoolImg,
+  greenWoolImg,
+  lightBlueWoolImg,
+  lightGrayWoolImg,
+  limeWoolImg,
+  magentaWoolImg,
+  orangeWoolImg,
+  pinkWoolImg,
+  purpleWoolImg,
+  redWoolImg,
+  yellowWoolImg,
+};
 export {
   dirtBlock,
   grassBlock,
@@ -58,4 +83,20 @@ export {
   woodBlock,
   strippedLogBlock,
   cobblestoneBlock,
+  blackWoolBlock,
+  whiteWoolBlock,
+  blueWoolBlock,
+  brownWoolBlock,
+  cyanWoolBlock,
+  grayWoolBlock,
+  greenWoolBlock,
+  lightBlueWoolBlock,
+  lightGrayWoolBlock,
+  limeWoolBlock,
+  magentaWoolBlock,
+  orangeWoolBlock,
+  pinkWoolBlock,
+  purpleWoolBlock,
+  redWoolBlock,
+  yellowWoolBlock,
 };

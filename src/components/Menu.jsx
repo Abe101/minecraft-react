@@ -17,7 +17,7 @@ export default function Menu() {
       <div className={`${isHidden ? "hidden transition-all" : ""}`}>
         <div className="mx-1">
           <p>
-            <span className="font-bold">Version</span>: 0.1.24 Alpha
+            <span className="font-bold">Version</span>: 0.4.4
           </p>
           <p>
             <span className="font-bold">Controls</span>:
@@ -27,7 +27,7 @@ export default function Menu() {
             <li>Space: Jump</li>
             <li>Click: Place a block</li>
             <li>Alt + Click: Remove a block</li>
-            <li>Digits 1-7: Select block</li>
+            <li>Scroll: Select Cube</li>
           </ul>
         </div>
         <div>
