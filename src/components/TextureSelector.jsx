@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
-import { useKeyboard } from "../hooks/useKeyboard";
+import { useSelector, useDispatch } from "react-redux";
+
+import { useScroll } from "../hooks/useScroll";
 import {
   dirtBlock,
   grassBlock,
@@ -8,9 +10,23 @@ import {
   strippedLogBlock,
   woodBlock,
   cobblestoneBlock,
+  blackWoolBlock,
+  whiteWoolBlock,
+  blueWoolBlock,
+  brownWoolBlock,
+  cyanWoolBlock,
+  grayWoolBlock,
+  greenWoolBlock,
+  lightBlueWoolBlock,
+  lightGrayWoolBlock,
+  limeWoolBlock,
+  magentaWoolBlock,
+  orangeWoolBlock,
+  pinkWoolBlock,
+  purpleWoolBlock,
+  redWoolBlock,
+  yellowWoolBlock,
 } from "../assets/assets";
-import { useSelector, useDispatch } from "react-redux";
-
 import { setTexture } from "../store/slices/cubeSlice";
 
 const images = {
@@ -21,57 +37,34 @@ const images = {
   log: logBlock,
   strippedLog: strippedLogBlock,
   cobblestone: cobblestoneBlock,
+  blackWool: blackWoolBlock,
+  whiteWool: whiteWoolBlock,
+  blueWool: blueWoolBlock,
+  brownWool: brownWoolBlock,
+  cyanWool: cyanWoolBlock,
+  grayWool: grayWoolBlock,
+  greenWool: greenWoolBlock,
+  lightBlueWool: lightBlueWoolBlock,
+  lightGrayWool: lightGrayWoolBlock,
+  limeWool: limeWoolBlock,
+  magentaWool: magentaWoolBlock,
+  orangeWool: orangeWoolBlock,
+  pinkWool: pinkWoolBlock,
+  purpleWool: purpleWoolBlock,
+  redWool: redWoolBlock,
+  yellowWool: yellowWoolBlock,
 };
 
 export default function TextureSelector() {
   const dispatch = useDispatch();
   const [visible, setVisible] = useState(false);
   const activeTexture = useSelector((state) => state.cubes.texture);
-  const [activeTextureName, setActiveTextureName] = useState("");
-  const { dirt, grass, glass, log, wood, cobblestone, strippedLog } = useKeyboard();
+  const texture = useScroll();
+  const activeTextureName = texture.toUpperCase();
 
   useEffect(() => {
-    const textures = {
-      dirt,
-      grass,
-      glass,
-      log,
-      wood,
-      cobblestone,
-      strippedLog,
-    };
-    const pressedTexture = Object.entries(textures).find(([, v]) => v);
-    if (pressedTexture) {
-      dispatch(setTexture(pressedTexture[0]));
-
-      switch (pressedTexture[0]) {
-        case "dirt":
-          setActiveTextureName("Dirt");
-          break;
-        case "grass":
-          setActiveTextureName("Grass");
-          break;
-        case "glass":
-          setActiveTextureName("Glass");
-          break;
-        case "log":
-          setActiveTextureName("Log");
-          break;
-        case "wood":
-          setActiveTextureName("Wood");
-          break;
-        case "cobblestone":
-          setActiveTextureName("Cobblestone");
-          break;
-        case "strippedLog":
-          setActiveTextureName("Stripped Log");
-          break;
-        default:
-          setActiveTextureName("");
-          break;
-      }
-    }
-  }, [dirt, grass, glass, log, wood, cobblestone, strippedLog, setTexture]);
+    dispatch(setTexture(texture));
+  }, [texture, setTexture]);
 
   useEffect(() => {
     const visibilityTimeout = setTimeout(() => {
@@ -84,13 +77,15 @@ export default function TextureSelector() {
     };
   }, [activeTexture]);
 
+  console.log(visible, activeTexture);
+
   return (
     visible && (
-      <div className="absolute top-[50%] right-[50%] translate-x-[25%] translate-y-[450%] scale-[5]">
+      <div className="absolute top-[50%] right-[50%] translate-x-[25%] translate-y-[150%] scale-[5]">
         <div>
           <p className="text-[4px] h-2 m-2">{activeTextureName}</p>
         </div>
-        <div className="grid grid-cols-7 bg-slate-500 border border-zinc-800 rounded-sm">
+        <div className="grid grid-cols-9 bg-slate-500 border border-zinc-800 rounded-sm">
           {Object.entries(images).map(([k, src]) => (
             <>
               <img
