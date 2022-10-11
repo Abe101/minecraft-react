@@ -11,10 +11,9 @@ export default function Player() {
   const actions = useKeyboard();
   const { camera } = useThree();
   const [ref, api] = useSphere(() => ({
-    mass: 0.75,
+    mass: 1,
     type: "Dynamic",
     position: [0, 1, 0],
-    args: [0.5],
   }));
   const position = useRef([0, 0, 0]);
   const velocity = useRef([0, 0, 0]);
