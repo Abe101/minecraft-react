@@ -1,59 +1,9 @@
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
+import { images } from "../assets/blocks";
 import { useScroll } from "../hooks/useScroll";
-import {
-  dirtBlock,
-  grassBlock,
-  glassBlock,
-  logBlock,
-  strippedLogBlock,
-  woodBlock,
-  cobblestoneBlock,
-  blackWoolBlock,
-  whiteWoolBlock,
-  blueWoolBlock,
-  brownWoolBlock,
-  cyanWoolBlock,
-  grayWoolBlock,
-  greenWoolBlock,
-  lightBlueWoolBlock,
-  lightGrayWoolBlock,
-  limeWoolBlock,
-  magentaWoolBlock,
-  orangeWoolBlock,
-  pinkWoolBlock,
-  purpleWoolBlock,
-  redWoolBlock,
-  yellowWoolBlock,
-} from "../assets/assets";
 import { setTexture } from "../store/slices/cubeSlice";
-
-const images = {
-  dirt: dirtBlock,
-  grass: grassBlock,
-  glass: glassBlock,
-  wood: woodBlock,
-  log: logBlock,
-  strippedLog: strippedLogBlock,
-  cobblestone: cobblestoneBlock,
-  blackWool: blackWoolBlock,
-  whiteWool: whiteWoolBlock,
-  blueWool: blueWoolBlock,
-  brownWool: brownWoolBlock,
-  cyanWool: cyanWoolBlock,
-  grayWool: grayWoolBlock,
-  greenWool: greenWoolBlock,
-  lightBlueWool: lightBlueWoolBlock,
-  lightGrayWool: lightGrayWoolBlock,
-  limeWool: limeWoolBlock,
-  magentaWool: magentaWoolBlock,
-  orangeWool: orangeWoolBlock,
-  pinkWool: pinkWoolBlock,
-  purpleWool: purpleWoolBlock,
-  redWool: redWoolBlock,
-  yellowWool: yellowWoolBlock,
-};
 
 export default function TextureSelector() {
   const dispatch = useDispatch();
@@ -76,8 +26,6 @@ export default function TextureSelector() {
       clearTimeout(visibilityTimeout);
     };
   }, [activeTexture]);
-
-  console.log(visible, activeTexture);
 
   return (
     visible && (
