@@ -41,7 +41,7 @@ export const cubesSlice = createSlice({
     saveCubes: (state) => {
       set("@cubes", state.cubes);
       toast.success("Saved!", {
-        position: "top-right",
+        position: "top-center",
         autoClose: 2000,
         hideProgressBar: false,
         closeOnClick: true,
